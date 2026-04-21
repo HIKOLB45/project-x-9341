@@ -1,0 +1,17 @@
+{
+  "project_name": "INDUSTRIAL_CANOPY_V5",
+  "version": "5.0.8",
+  "engineer": "User_Dev",
+  "dimensions": {
+    "length": 5000,
+    "width": 4800,
+    "angle": 6.2
+  },
+  "modules": [
+    "geometry_engine",
+    "physics_static",
+    "materials_inventory",
+    "financial_tracker"
+  ],
+  "checksum": "8f8e8e8e8e8e8e8e8e8e8e8e8e"
+}
