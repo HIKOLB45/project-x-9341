@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>GEOMETRY_MDL // V5.0.8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body class="sub-module">
+    <nav class="mega-nav">
+        <div class="nav-container">
+            <div class="system-id"><span class="pulse-icon"></span>UNIT_ID: GEOMETRY_ANALYSIS</div>
+            <div class="menu-grid">
+                <a href="index.html" class="nav-item">DASHBOARD</a>
+                <a href="geometry.html" class="nav-item active">GEOMETRY_MDL</a>
+                <a href="physics.html" class="nav-item">PHYSICS_MDL</a>
+                <a href="materials.html" class="nav-item">MATERIALS_DB</a>
+                <a href="terminal.html" class="nav-item">SYS_CONSOLE</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px;">
+        <header class="module-header" data-aos="fade-down">
+            <h2 class="module-title">01 // ГЕОМЕТРИЧНА ПЛАНІМЕТРІЯ</h2>
+            <p class="module-desc">Розрахунок площин, кутів нахилу та точок кріплення опорної системи.</p>
+        </header>
+
+        <div class="content-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 50px;">
+            <div class="data-card">
+                <h3>ГАБАРИТНІ ПАРАМЕТРИ</h3>
+                <div class="spec-list">
+                    <div class="spec-item"><span>Ширина (X-axis):</span> <strong>5000 mm</strong></div>
+                    <div class="spec-item"><span>Глибина (Y-axis):</span> <strong>4800 mm</strong></div>
+                    <div class="spec-item"><span>Висота Front (Z1):</span> <strong>2500 mm</strong></div>
+                    <div class="spec-item"><span>Висота Rear (Z2):</span> <strong>2000 mm</strong></div>
+                    <div class="spec-item"><span>Кут нахилу (&alpha;):</span> <strong>~6.0°</strong></div>
+                </div>
+            </div>
+
+            <div class="data-card">
+                <h3>КООРДИНАТИ СТІЙОК (Base)</h3>
+                <pre class="code-view">
+P1 (0, 0, 2500)   | P2 (2500, 0, 2500) | P3 (5000, 0, 2500)
+P4 (0, 4800, 2000) | P5 (2500, 4800, 2000) | P6 (5000, 4800, 2000)
+                </pre>
+            </div>
+        </div>
+
+        <div class="table-wrapper" style="margin-top: 50px;">
+            <h3>ДЕТАЛІЗАЦІЯ КРОКВЯНОЇ СИСТЕМИ</h3>
+            <table class="ultra-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Елемент</th>
+                        <th>Довжина (L)</th>
+                        <th>К-сть</th>
+                        <th>Кут різу</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>F-01</td><td>Поперечна ферма (Main)</td><td>5000 mm</td><td>6</td><td>90°</td></tr>
+                    <tr><td>B-01</td><td>Про поздовжня балка (Side)</td><td>4810 mm</td><td>2</td><td>84°</td></tr>
+                    <tr><td>L-01</td><td>Обрешітка (Top)</td><td>5000 mm</td><td>7</td><td>90°</td></tr>
+                    <tr><td>S-01</td><td>Опорна стійка (High)</td><td>2500 mm</td><td>3</td><td>90°</td></tr>
+                    <tr><td>S-02</td><td>Опорна стійка (Low)</td><td>2000 mm</td><td>3</td><td>90°</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
