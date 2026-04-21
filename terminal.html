@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>SYS_CONSOLE // UNIT_10</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .terminal-window {
+            background: #000; border: 1px solid var(--neon-blue);
+            height: 70vh; margin-top: 100px; padding: 20px;
+            overflow-y: auto; font-family: 'Roboto Mono', monospace;
+            box-shadow: 0 0 30px rgba(0, 242, 255, 0.2);
+        }
+        .input-line { display: flex; gap: 10px; color: var(--neon-blue); margin-top: 10px; }
+        #user-input {
+            background: transparent; border: none; color: #fff;
+            outline: none; width: 100%; font-family: inherit;
+        }
+        .log-entry { margin: 5px 0; color: #94a3b8; }
+        .log-cmd { color: var(--neon-blue); font-weight: bold; }
+    </style>
+</head>
+<body class="terminal-theme">
+    <div class="container">
+        <div class="terminal-window" id="terminal">
+            <div class="log-entry">> CANOPY_OS v5.0.8 INITIALIZED...</div>
+            <div class="log-entry">> Введіть 'help' для переліку доступних інженерних команд.</div>
+        </div>
+        <div class="input-line">
+            <span>system@user:~$</span>
+            <input type="text" id="user-input" autofocus>
+        </div>
+    </div>
+
+    <script>
+        const input = document.getElementById('user-input');
+        const terminal = document.getElementById('terminal');
+
+        input.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                const cmd = input.value.toLowerCase().trim();
+                const line = document.createElement('div');
+                line.className = 'log-entry';
+                line.innerHTML = `<span class="log-cmd">> ${cmd}</span>`;
+                terminal.appendChild(line);
+
+                // ЛОГІКА КОМАНД
+                const response = document.createElement('div');
+                response.className = 'log-entry';
+                
+                if (cmd === 'help') {
+                    response.innerHTML = "Доступні команди: [status, calc_weight, check_safety, clear]";
+                } else if (cmd === 'status') {
+                    response.innerHTML = "SYSTEM: ONLINE | LOADS: STABLE | ERRORS: 0";
+                } else if (cmd === 'calc_weight') {
+                    response.innerHTML = "Загальна маса конструкції: 271.4 кг. Розрахунок завершено.";
+                } else if (cmd === 'clear') {
+                    terminal.innerHTML = '';
+                    response.innerHTML = "Console cleared.";
+                } else {
+                    response.innerHTML = "Unknown command. Type 'help'.";
+                }
+                
+                terminal.appendChild(response);
+                input.value = '';
+                terminal.scrollTop = terminal.scrollHeight;
+            }
+        });
+    </script>
+</body>
+</html>
