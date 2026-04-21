@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CANOPY_OS // CORE_SYSTEM_v5.0.8</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body class="terminal-theme">
+    <div id="loader" class="system-loader">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <div class="status-text">INITIALIZING_CORE_V5...</div>
+            <div class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+    </div>
+
+    <nav class="mega-nav">
+        <div class="nav-container">
+            <div class="system-id">
+                <span class="pulse-icon"></span>
+                <span class="id-text">UNIT_ID: NAVES-5048-PRO</span>
+            </div>
+            <div class="menu-grid">
+                <a href="index.html" class="nav-item active">DASHBOARD</a>
+                <a href="geometry.html" class="nav-item">GEOMETRY_MDL</a>
+                <a href="physics.html" class="nav-item">PHYSICS_MDL</a>
+                <a href="materials.html" class="nav-item">MATERIALS_DB</a>
+                <a href="welding.html" class="nav-item">WELDING_LOG</a>
+                <a href="budget.html" class="nav-item">FINANCE_MDL</a>
+                <a href="terminal.html" class="nav-item">SYS_CONSOLE</a>
+                <a href="safety.html" class="nav-item">SEC_PROTOCOL</a>
+                <a href="3d_render.html" class="nav-item">RENDER_3D</a>
+                <a href="export.html" class="nav-item">EXPORT_DATA</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard-grid">
+        <section class="hero-module">
+            <div class="glitch-wrapper">
+                <h1 class="glitch-text" data-text="INDUSTRIAL_CANOPY">INDUSTRIAL_CANOPY</h1>
+            </div>
+            <div class="module-status">
+                <div class="stat-card">
+                    <label>LOAD_CAPACITY</label>
+                    <div class="value">180 kg/m²</div>
+                    <div class="mini-graph"><span></span><span></span><span></span></div>
+                </div>
+                <div class="stat-card">
+                    <label>WIND_RESISTANCE</label>
+                    <div class="value">28.5 m/s</div>
+                    <div class="mini-graph"><span></span><span></span><span></span></div>
+                </div>
+            </div>
+            <div class="action-zone">
+                <a href="geometry.html" class="cyber-button">
+                    <span class="btn-content">START_ENGINEERING_PROCESS</span>
+                    <span class="btn-glitch"></span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="core-logic.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => document.getElementById('loader').remove(), 500);
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
