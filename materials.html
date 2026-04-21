@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>MATERIALS_DB // UNIT_4</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body class="terminal-theme">
+    <nav class="mega-nav">
+        <div class="nav-container">
+            <div class="system-id"><span class="pulse-icon"></span>UNIT_ID: MATERIALS_DATABASE</div>
+            <div class="menu-grid">
+                <a href="index.html" class="nav-item">DASHBOARD</a>
+                <a href="geometry.html" class="nav-item">GEOMETRY_MDL</a>
+                <a href="materials.html" class="nav-item active">MATERIALS_DB</a>
+                <a href="budget.html" class="nav-item">FINANCE_MDL</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px;">
+        <div class="card">
+            <h2 style="font-family: 'Orbitron'; color: var(--neon-blue);">RESRTR_04 // ВІДОМІСТЬ МЕТАЛОПРОКАТУ</h2>
+            <p style="margin-bottom: 30px; color: #94a3b8;">Стандарт: ДСТУ EN 10219. Матеріал: Сталь S235JR / 09Г2С</p>
+            
+            <table class="ultra-table">
+                <thead>
+                    <tr>
+                        <th>Профіль (mm)</th>
+                        <th>S (товщина)</th>
+                        <th>Маса 1м (кг)</th>
+                        <th>Ix (см⁴)</th>
+                        <th>Призначення в проекті</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>50 x 50</td><td>3.0 mm</td><td>4.42</td><td>14.8</td><td>Опорні вертикальні стійки (P1-P6)</td></tr>
+                    <tr><td>80 x 40</td><td>3.0 mm</td><td>5.33</td><td>45.2</td><td>Головні несучі поздовжні балки</td></tr>
+                    <tr><td>60 x 40</td><td>2.5 mm</td><td>3.71</td><td>18.4</td><td>Поперечні кроквяні ферми</td></tr>
+                    <tr><td>40 x 20</td><td>2.0 mm</td><td>1.76</td><td>3.5</td><td>Обрешітка під профнастил</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="data-card" style="margin-top: 30px; border-color: var(--neon-purple);">
+            <h3 style="color: var(--neon-purple);">ДОДАТКОВІ КОМПОНЕНТИ</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 20px 0;">
+                <div class="spec-item">Лист основи (стійки): <strong>150x150x6 mm (6 шт)</strong></div>
+                <div class="spec-item">Покрівельний лист: <strong>Профнастил ПК-20 (0.5 mm)</strong></div>
+                <div class="spec-item">Анкерні болти: <strong>M12 x 150 (24 шт)</strong></div>
+                <div class="spec-item">Фарба: <strong>Hammerite 3-in-1 (5.0 L)</strong></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
