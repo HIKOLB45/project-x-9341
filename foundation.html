@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>FOUNDATION_MDL // UNIT_13</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+</head>
+<body class="terminal-theme">
+    <nav class="mega-nav">
+        <div class="nav-container">
+            <div class="system-id"><span class="pulse-icon"></span>UNIT_ID: GROUND_ENGINEERING</div>
+            <div class="menu-grid">
+                <a href="index.html" class="nav-item">DASHBOARD</a>
+                <a href="foundation.html" class="nav-item active">FOUNDATION</a>
+                <a href="terminal.html" class="nav-item">SYS_CONSOLE</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px;">
+        <div class="card" style="border-color: #94a3b8;">
+            <h2 style="font-family: 'Orbitron'; color: #f8fafc;">03 // ФУНДАМЕНТНІ РОБОТИ (ЗЕМЛЯНИЙ ЦИКЛ)</h2>
+            <div class="spec-list" style="margin-top: 25px;">
+                <div class="spec-item">Тип основи: <strong>Буронабивні палі (6 одиниць)</strong></div>
+                <div class="spec-item">Діаметр лунки: <strong>300 mm</strong></div>
+                <div class="spec-item">Глибина залягання: <strong>900 mm (нижче рівня промерзання)</strong></div>
+                <div class="spec-item">Марка бетону: <strong>C16/20 (М250)</strong></div>
+            </div>
+        </div>
+
+        <div class="table-wrapper" style="margin-top: 40px;">
+            <h3>РОЗРАХУНОК ОБ'ЄМУ БЕТОНУ</h3>
+            <table class="ultra-table">
+                <thead>
+                    <tr>
+                        <th>Показник</th>
+                        <th>Формула</th>
+                        <th>Результат</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Об'єм однієї лунки</td><td>V = π * r² * h</td><td>~0.063 m³</td></tr>
+                    <tr><td>Загальний об'єм (6 шт)</td><td>V_total = V * 6</td><td>~0.38 m³</td></tr>
+                    <tr><td>Маса суміші</td><td>V_total * 2400 kg/m³</td><td>~912 kg</td></tr>
+                    <tr><td>Запас суміші (корекція)</td><td>+10%</td><td>~0.42 m³</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="data-card" style="margin-top: 30px;">
+            <h3 style="color: var(--neon-blue);">АРМУВАННЯ ТА ЗАКЛАДНІ</h3>
+            <p style="font-family: 'Roboto Mono'; font-size: 0.85rem; margin-top: 10px;">
+                > Поздовжня арматура: 3хA400C (Ø10mm) на кожну лунку.<br>
+                > Крок хомутів: 200 mm.<br>
+                > Анкерна пластина: Сталь 150х150х6 mm з 4 отворами Ø14mm.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
